@@ -1,5 +1,6 @@
 package lv.helloit.board;
 
+import lv.helloit.board.exceptions.WrongFromFieldException;
 import lv.helloit.board.pieces.*;
 
 public class Board {
@@ -16,11 +17,12 @@ public class Board {
 
     }
 
-    public void makeMove(Move move) throws WrongFromFieldException  {
+    public void makeMove(Move move) throws WrongFromFieldException {
         Field from = board[move.from.x][move.from.y];
         if (from.isEmpty() || (from.figure().isWhite() == this.whiteTurn)) {
             throw new WrongFromFieldException("Wrong");
         } else {
+            if (Pawn.validate)
             board[move.to.x][move.to.y] = board[move.from.x][move.from.y];
             board[move.from.x][move.from.y] = new Field();
 

@@ -1,5 +1,7 @@
 package lv.helloit.board.pieces;
 
+
+
 public class Pawn extends Figure {
     public Pawn(boolean isWhite) {
         super(isWhite);
@@ -14,6 +16,4 @@ public class Pawn extends Figure {
 
         }
     }
-
-
 }

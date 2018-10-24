@@ -1,6 +1,9 @@
 package lv.helloit.controller;
 
 import lv.helloit.board.*;
+import lv.helloit.board.exceptions.EmptyInputException;
+import lv.helloit.board.exceptions.OutOfBoundsException;
+import lv.helloit.board.exceptions.WrongFromFieldException;
 
 import java.util.Scanner;
 
